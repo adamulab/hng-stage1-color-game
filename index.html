@@ -7,16 +7,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1 data-testid="gameInstructions">Guess the correct color!</h1>
-    <div class="color-box" data-testid="colorBox"></div>
-    <p class="status" data-testid="gameStatus"></p>
-    <div class="color-options">
-      <!-- Color buttons will be dynamically added here -->
+    <div class="wrapper">
+      <h1>Color Guessing Game!</h1>
+      <div class="color-box" data-testid="colorBox"></div>
+      <p class="status" data-testid="gameStatus"></p>
+      <div class="color-options" data-testid="colorOption">
+        <!-- Color buttons will be dynamically added here -->
+      </div>
+      <p data-testid="gameInstructions">
+        Guess the correct color from the options above!
+      </p>
+      <p class="score" data-testid="score">Score: 0</p>
+      <div class="button">
+        <button class="new-game-button" data-testid="newGameButton">
+          New Game
+        </button>
+        <button class="reset-game-button" data-testid="resetGameButton">
+          Reset Game
+        </button>
+      </div>
     </div>
-    <p class="score" data-testid="score">Score: 0</p>
-    <button class="new-game-button" data-testid="newGameButton">
-      New Game
-    </button>
     <script src="app.js"></script>
   </body>
 </html>

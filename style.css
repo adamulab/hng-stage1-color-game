@@ -6,7 +6,15 @@ body {
   justify-content: center;
   min-height: 100vh;
   margin: 0;
+  background-color: #333333;
+}
+.wrapper {
   background-color: #f3f3f3;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
 }
 h1 {
   margin-bottom: 20px;
@@ -37,6 +45,10 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+.button {
+  display: flex;
+  gap: 20px;
+}
 .new-game-button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -47,6 +59,17 @@ h1 {
 }
 .new-game-button:hover {
   background-color: #0056b3;
+}
+.reset-game-button {
+  padding: 10px 20px;
+  background-color: #ff0037;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.reset-game-button:hover {
+  background-color: #7e2236;
 }
 .status {
   font-size: 18px;

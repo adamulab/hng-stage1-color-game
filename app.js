@@ -15,8 +15,9 @@ let buttonsVisible = false;
 const colorBox = document.querySelector(".color-box");
 const gameStatus = document.querySelector(".status");
 const colorOptionsContainer = document.querySelector(".color-options");
-const scoreDisplay = document.querySelector(".score");
+const showScore = document.querySelector(".score");
 const newGameButton = document.querySelector(".new-game-button");
+const resetGameButton = document.querySelector(".reset-game-button");
 
 function getRandomColor() {
   return colors[Math.floor(Math.random() * colors.length)];
@@ -29,7 +30,7 @@ function shuffleArray(array) {
   }
 }
 
-function setupGame() {
+function startGame() {
   targetColor = getRandomColor();
   colorBox.style.backgroundColor = targetColor;
   gameStatus.textContent = "";
@@ -63,11 +64,15 @@ function handleColorGuess(color, button) {
   } else {
     gameStatus.textContent = "Wrong! Try again.";
   }
-  scoreDisplay.textContent = `Score: ${score}`;
+  showScore.textContent = `Score: ${score}`;
 }
 
 newGameButton.addEventListener("click", () => {
-  setupGame();
+  startGame();
 });
 
-setupGame();
+resetGameButton.addEventListener("click", () => {
+  showScore.textContent = `Score: 0`;
+});
+
+startGame();
